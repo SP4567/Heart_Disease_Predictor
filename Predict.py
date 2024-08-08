@@ -1,6 +1,5 @@
 import pickle
-import streamlit as st
-import keras
+import streamlit as st
 import tensorflow
 import numpy as np
 import pandas as pd
