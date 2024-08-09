@@ -68,6 +68,7 @@ l = st.number_input('Enter the thal (thalassemia condition)', step=1., format="%
 if st.button('Predict'):
     dc = [[a, s, cp, c, o, f, r, t, e, p, slope, v, l]]
     inp = Scaler.fit_transform(dc)
+    inp = inp.reshape((1, -1)) 
     res = model.predict(inp)
     class_x = np.argmax(res, axis=1)
     if class_x == [[1]]:
