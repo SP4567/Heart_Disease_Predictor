@@ -39,7 +39,7 @@ base_dir = os.path.dirname(os.path.abspath(__file__))
 scaler_path = os.path.join(base_dir, 'scaler (3).pkl')
 
 # Load the vectorizer
-with open(vectorizer_path, 'rb') as f:
+with open(scaler_path, 'rb') as f:
     Scaler = pickle.load(f)
 
 # Get the directory of the current script
