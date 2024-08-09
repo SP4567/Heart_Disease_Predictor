@@ -1,5 +1,6 @@
 import pickle
-import streamlit as st
+import streamlit as st
+
 import tensorflow
 import numpy as np
 import pandas as pd
@@ -31,9 +32,25 @@ def return_prediction(model, Scaler, sample_json):
     classes = np.argmax(predict, axis=1)
     return classes
 
+# Get the directory of the current script
+base_dir = os.path.dirname(os.path.abspath(__file__))
 
-Scaler = pickle.load(open("C:\\Users\\Suyash Pandey\\PycharmProjects\\Heart_Disease_Predictor\\scaler (3).pkl", "rb"))
-model = load_model("Heart_Disease_Predictor (1).h5")
+# Build the full path to the vectorizer file
+scaler_path = os.path.join(base_dir, 'vectorizer (3).pkl')
+
+# Load the vectorizer
+with open(vectorizer_path, 'rb') as f:
+    Scaler = pickle.load(f)
+
+# Get the directory of the current script
+base_dir = os.path.dirname(os.path.abspath(__file__))
+
+# Build the full path to the model file
+model_path = os.path.join(base_dir, 'Spam_classifier.h5')
+
+#loading the model
+model = load_model(model_path)
+
 st.title("Heart_Disease_Predictor")
 a = st.number_input('Enter the age', step=1., format="%.2f")
 s = st.number_input('Enter the sex', step=1., format="%.2f")
