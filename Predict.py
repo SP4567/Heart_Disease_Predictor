@@ -10,6 +10,7 @@ from sklearn.model_selection import train_test_split
 import tensorflow as tf
 from tensorflow.keras.layers import Dense
 from tensorflow.keras.models import load_model
+import os
 
 def return_prediction(model, Scaler, sample_json):
     a = sample_json['age']
