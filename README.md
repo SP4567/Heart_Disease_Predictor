@@ -10,3 +10,5 @@ This GitHub repository contains a project titled "Heart_Disease_Predictor". The 
 7. `README.md`: A markdown file that typically provides an overview, instructions, and other relevant information about the project.
 
 The repository does not have a detailed description, website, or topics provided. It is a public repository with one star and one watcher, but no forks or releases at the time of analysis.
+
+link: https://heartdiseasepredictor-zcic4wsinog8sn6uvmfwpy.streamlit.app/
